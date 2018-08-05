@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="quantity"
+           android:textAllCaps="true"
+           android:textSize="18sp"
+           android:id="@+id/quantityTextView"
+           android:padding="10dp"/>
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/decrementButton"
+           android:text="-"
+           android:textSize="16sp"
+           android:layout_toLeftOf="@id/quantityValue"
+           android:padding="10dp"
+           android:onClick="Decrement"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="0"
+           android:textSize="16sp"
+           android:id="@+id/quantityValue"
+           android:layout_toLeftOf="@id/incrementButton"
+           android:padding="10dp"
+           />
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="+"
+           android:id="@+id/incrementButton"
+           android:layout_alignParentRight="true"
+           android:padding="10dp"
+           android:layout_marginRight="12dp"
+           android:onClick="Increment"/>
+
+   </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="price"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:id="@+id/priceValue"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="order your coffee"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/placeOrder"
+        android:onClick="placeOrder"
+        />
+</LinearLayout>
